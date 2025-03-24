@@ -7,14 +7,39 @@ body {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
 }
 
 header {
+    padding: 1rem;
     background-color: lightblue;
     grid-row-start: 1;
     grid-column: 2 / span 2;
+
+    display: grid;
+    grid-template-areas:
+    "search-bar user-badge"
+    "welcome-message page-controls";
+}
+
+.search-bar {
+    grid-area: search-bar;
+}
+
+.wecome-message {
+    grid-area: welcome-message;
+}
+
+.user-badge {
+    grid-area: user-badge;
+    justify-self:end;
+}
+
+.page-controls {
+    grid-area: page-controls;
+    align-self: last baseline;
+    justify-self: center;
 }
 
 .sidebar {
@@ -24,6 +49,8 @@ header {
 }
 
 main {
+    background-color: lightgreen;
+    padding: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     grid-column-start:2;
