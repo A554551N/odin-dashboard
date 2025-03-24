@@ -1,1 +1,2 @@
 # odin-dashboard
+This project represents the capstone for the "Intermediate HTML and CSS" course on The Odin Project.  It will be created primarily in CSS Grid with some Flex elements.  Being responsive is not a requirement of this application, but it will still handle a variety of screen sizes.
