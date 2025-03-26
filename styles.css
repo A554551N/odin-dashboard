@@ -19,7 +19,7 @@ header {
     grid-row-start: 1;
     grid-column: 2 / span 2;
     box-shadow: 2px 2px 5px #777;
-    
+
     display: grid;
     grid-template-areas:
     "search-bar user-badge"
@@ -30,8 +30,26 @@ header {
     grid-area: search-bar;
 }
 
+.search-bar img {
+    height: 2rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.search-bar input {
+    width: 70%;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 1.5rem;
+}
+
+.search-bar input:focus {
+    border-color: purple;
+}
+
 .welcome-message {
     grid-area: welcome-message;
+    align-self: last baseline;
 }
 .user-name {
     font-family: 'Covered By Your Grace', sans-serif;
@@ -55,12 +73,35 @@ header {
 .user-badge {
     grid-area: user-badge;
     justify-self:end;
+
+    display: grid;
+    grid-template-areas:
+    "avatar profile-name"
+    "avatar profile-name";
+    justify-items: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+#avatar {
+    grid-area: avatar;
+    width: 50px;
+}
+
+#profile-name {
+    grid-area: profile-name;
+    font-weight: bold;
 }
 
 .page-controls {
     grid-area: page-controls;
     align-self: last baseline;
     justify-self: end;
+    height: 60%;
+    width: 100%;
+    
+    display: flex;
+    justify-content: flex-end;
 }
 
 .sidebar {
@@ -167,4 +208,13 @@ main {
 .player-name {
     font-family: "Covered By Your Grace";
     font-weight: normal;
+}
+
+button {
+    background-color: purple;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.5rem;
 }
